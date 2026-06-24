@@ -75,7 +75,7 @@ cp .env.example .env
 ```
 Open `.env` and replace the placeholder with your real key:
 ```
-VITE_GEMINI_API_KEY=AIzaSyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+VITE_GEMINI_API_KEY=[Your API Key]
 ```
 
 ### Step 5 — Start the dev server
