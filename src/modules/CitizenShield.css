@@ -1,0 +1,170 @@
+/* src/modules/CitizenShield.css */
+
+.shield-heading h1 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin: 0 0 4px;
+}
+
+.shield-heading p {
+  color: var(--text-tertiary);
+  font-size: 13px;
+  margin: 0 0 20px;
+  max-width: 620px;
+}
+
+.shield-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 16px;
+}
+
+.chat-card {
+  display: flex;
+  flex-direction: column;
+  height: 560px;
+}
+
+.chat-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 4px;
+  margin-bottom: 12px;
+}
+
+.chat-msg {
+  display: flex;
+}
+
+.chat-msg-user {
+  justify-content: flex-end;
+}
+
+.chat-msg-assistant {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: 78%;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.chat-msg-user .chat-bubble {
+  background: var(--accent);
+  color: #1a0e07;
+  border-radius: var(--radius-md) var(--radius-md) 4px var(--radius-md);
+}
+
+.chat-msg-assistant .chat-bubble {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 4px;
+}
+
+.chat-bubble-loading {
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.quick-question-chip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 11.5px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.quick-question-chip:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent-bright);
+}
+
+.quick-question-chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-row input {
+  flex: 1;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 10px 12px;
+  font-size: 13.5px;
+}
+
+.chat-input-row input:focus {
+  border-color: var(--accent);
+}
+
+.helpline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.helpline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.helpline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.helpline-name {
+  font-size: 12.5px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.helpline-contact {
+  font-family: var(--font-mono);
+  color: var(--accent-bright);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.helpline-note {
+  font-size: 11.5px;
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 900px) {
+  .shield-layout {
+    grid-template-columns: 1fr;
+  }
+  .chat-card {
+    height: 480px;
+  }
+}
